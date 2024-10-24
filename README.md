@@ -20,12 +20,11 @@ services:
       libatk-bridge2.0-0 libcups2 libdrm2 libdbus-1-3 libxkbcommon0
       libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2
       libatspi2.0-0 libxshmfence1 && python -m pip install --upgrade pip && pip
-      install pyppeteer Pillow asyncio aiohttp opencv-python-headless ddddocr
-      quart && rm -rf && wget -O api.py
-      https://raw.githubusercontent.com/zhao-zg/jd-login/main/api.py
-      && wget -O login.py
-      https://raw.githubusercontent.com/zhao-zg/jd-login/main/login.py
-      && python api.py"
+      install requests pyppeteer Pillow asyncio aiohttp opencv-python-headless ddddocr quart &&
+      wget -O api.py https://raw.githubusercontent.com/zhao-zg/jd-login/main/api.py &&
+      wget -O login.py https://raw.githubusercontent.com/zhao-zg/jd-login/main/login.py &&
+      wget -O update_cookie.py https://raw.githubusercontent.com/wangbo777/jd-login/update_cookie.py && 
+      python update_cookie.py"
 networks: {}
 
 ```
